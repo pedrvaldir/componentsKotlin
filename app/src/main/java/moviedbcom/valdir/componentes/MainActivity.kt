@@ -1,5 +1,6 @@
 package moviedbcom.valdir.componentes
 
+import android.app.ProgressDialog
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -79,6 +80,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
             Toast.makeText(this, value, Toast.LENGTH_LONG).show()
         }else if(id ==  R.id.buttonSetSpinner){
             spinner.setSelection(3)
+        }else if(id == R.id.buttonProgress){
+            val progress: ProgressDialog = ProgressDialog(this)
+            progress.setTitle("titulo")
+            progress.setMessage("mensagem")
+            progress.show()
+
+            // progress.hide()
+            //progress.dismiss()
         }
     }
 
